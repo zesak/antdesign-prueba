@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Button, Select, Radio, Slider, Alert, Progress, Card, Breadcrumb } from "antd";
-
+import { Button, Select, Radio, Slider, Alert, Progress, Card, Breadcrumb } from "antd";
+import { PaletaColores } from "./paletaColores";
 import "./App.css";
 
 const dummyMsj = "Te entregamos la mejor información para tomar decisiones ¡Cierra el trato y disfruta de tu nuevo hogar!";
@@ -13,24 +13,28 @@ class App extends Component {
 					<p>Ver toda la documentación de <a href="https://ant.design/components/overview/">componentes</a>.</p>
 				</header>
 
+				<Card title="Colores">
+					<PaletaColores />
+				</Card>
+
 				<section className="c-cards">
 					<Card title="Buttons">
 						<div className="c-items">
-						<Button type="primary">Primary</Button>
-						<Button type="warning">Warning</Button>
-						<Button type="danger" >Danger</Button>
-						<Button>Default</Button>
-						<Button type="dashed">Dashed</Button>
-						<Button type="text">Text</Button>
-						<Button type="link">Link </Button>
+							<Button type="primary">Primary</Button>
+							<Button type="warning">Warning</Button>
+							<Button type="danger" >Danger</Button>
+							<Button>Default</Button>
+							<Button type="dashed">Dashed</Button>
+							<Button type="text">Text</Button>
+							<Button type="link">Link </Button>
 						</div>
 						<br />
 						<div className="c-items">
-						<Button type="primary" size="small">Small</Button>
-						<Button type="primary" >Middle (default)</Button>
-						<Button type="primary" size="large">Large</Button>
+							<Button type="primary" size="small">Small</Button>
+							<Button type="primary" >Middle (default)</Button>
+							<Button type="primary" size="large">Large</Button>
 						</div>
-						
+
 
 
 					</Card>

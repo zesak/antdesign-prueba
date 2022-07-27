@@ -9,13 +9,16 @@
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js --hot",
     "start:reload": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "webpack --config=config/webpack.prod.js"
+    "build": "webpack --config=config/webpack.prod.js",
+	"build:sd": "token-transformer tokens/tokens.json tokens/tokens-transformed.json --expandTypography=true --expandShadow=true && style-dictionary build"
   },
   "dependencies": {
+    "@ant-design/colors": "^6.0.0",
     "antd": "^4.0.3",
     "less": "^3.11.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "token-transformer": "0.0.24"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -29,6 +32,7 @@
     "html-webpack-plugin": "^3.2.0",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.9.0",
+    "style-dictionary": "^3.7.1",
     "style-loader": "^1.1.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",

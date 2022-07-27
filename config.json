@@ -1,0 +1,29 @@
+{
+	"source": ["tokens/tokens-transformed.json"],
+	"platforms": {
+	  "scss": {
+		"transformGroup": "scss",
+		"buildPath": "build/",
+		"files": [{
+		  "destination": "scss/_variables.scss",
+		  "format": "scss/variables"
+		}]
+	  },
+	  "less": {
+		"transformGroup": "less",
+		"buildPath": "build/",
+		"files": [{
+		  "destination": "less/variables.less",
+		  "format": "less/variables"
+		}]
+	  },
+	  "android": {
+		"transformGroup": "android",
+		"buildPath": "build/android/",
+		"files": [{
+		  "destination": "font_dimens.xml",
+		  "format": "android/fontDimens"
+		}]
+	  }
+	}
+  }

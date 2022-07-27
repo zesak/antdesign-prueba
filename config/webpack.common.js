@@ -35,11 +35,13 @@ module.exports = {
           {
             loader: "less-loader",
             options: {
+				//modifyVars: require('../themes/main.less'),
               modifyVars: {
+				// "hack": `@import "../themes/main.less";`
                 hack: `true; @import "${path.resolve(
                   __dirname,
-                  "../",
-                  "theme.less"
+                  "../themes/",
+                  "main.less"
                 )}";`
               },
               javascriptEnabled: true

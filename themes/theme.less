@@ -1,13 +1,11 @@
 
-@import 'node_modules/antd/es/style/color/colors.less';
+//@import 'node_modules/antd/es/style/color/colors.less';
+@import '../build/less/variables.less';
 
-//PISANDO color mientras no genero la paleta con la herramienta para eso
-@blue-6: #3200C1;
-@green-6: #23AD63;
-@gold-6: #F9C235;
-@red-5: #E63946;
+//**MIS TOKENS
 @base: 16px; //unidad base de fuente y espacio
-@color-cta: #37FFDB;
+//**
+
 
 @theme: default;
 
@@ -22,12 +20,12 @@
 
 // -------- Colors -----------
 // >>> Primary
-@primary-color: @blue-6;
-@primary-color-hover: color(~`colorPalette('@{primary-color}', 5) `);
+@primary-color: @brand-6;
+@primary-color-hover: color(~`colorPalette('@{primary-color}', 9) `);
 @primary-color-active: color(~`colorPalette('@{primary-color}', 7) `);
 @primary-color-outline: fade(@primary-color, @outline-fade);
 
-@processing-color: @blue-6;
+@processing-color: @brand-6;
 
 // >>> Info
 @info-color: @primary-color;
@@ -145,15 +143,15 @@
 
 // The background colors for active and hover states for things like
 // list items or table cells.
-@item-active-bg: @primary-1;
-@item-hover-bg: @primary-5;
+@item-active-bg: @brand-8;
+@item-hover-bg: @neutral-3;
 
 // ICONFONT
 @iconfont-css-prefix: anticon;
 
 // LINK
 @link-color: @primary-color;
-@link-hover-color: color(~`colorPalette('@{link-color}', 1) `);
+@link-hover-color: @primary-color-hover ; //color(~`colorPalette('@{link-color}', 1) `);
 @link-active-color: color(~`colorPalette('@{link-color}', 7) `);
 @link-decoration: none;
 @link-hover-decoration: none;
@@ -318,7 +316,7 @@
 @radio-button-bg: @btn-default-bg;
 @radio-button-checked-bg: @btn-default-bg;
 @radio-button-color: @btn-default-color;
-@radio-button-hover-color: @primary-5;
+@radio-button-hover-color: @primary-color-hover;
 @radio-button-active-color: @primary-7;
 @radio-button-padding-horizontal: @padding-md - 1px;
 @radio-disabled-button-checked-bg: @disabled-active-bg;
@@ -476,10 +474,10 @@
 // Select
 // ---
 @select-border-color: @border-color-base;
-@select-item-selected-color: red;
+@select-item-selected-color: @text-color-inverse;
 @select-item-selected-font-weight: 600;
 @select-dropdown-bg: @component-background;
-@select-item-selected-bg: @primary-color;
+@select-item-selected-bg: @item-active-bg;
 @select-item-active-bg: @item-hover-bg;
 @select-dropdown-vertical-padding: @dropdown-vertical-padding;
 @select-dropdown-font-size: @dropdown-font-size;

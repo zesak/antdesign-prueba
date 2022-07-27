@@ -67,3 +67,25 @@
 .ant-breadcrumb > span:last-child{
 	font-weight: 700;
 }
+/* Muestra de colores */
+
+.gama{
+	display: flex;
+	margin-bottom: 10px;
+}
+.gama>div{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.gama .base{
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+}
+.gama .base::before{
+	content: "«";
+}
+.gama .base::after{
+	content: "»";
+}
